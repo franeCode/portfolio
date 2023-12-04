@@ -9,30 +9,29 @@ import ProjectView from "../ProjectView";
 
 
 function Home() {
-    const [showContent, setShowContent] = useState(false)
+    const [showContent, setShowContent] = useState(true)
 
     const changeContent = () => {
-        setShowContent(true);
+        setShowContent(!showContent);
       };
 
   return (
     <>
-      <div className="main-container">
+      <div className="main-container overflow-hidden">
         <div className="flex-container w-full">
           {/* first row */}
-          <HomeInfo />
+          <HomeInfo changeContent={changeContent}/>
 
           {/* second row */}
           <div className="big-container">
             <div className="content-wrapper">
+            {/* <div className={`big-container content-wrapper ${showContent ? "transition-opacity opacity-100 duration-150 ease-in-out" : "transition-opacity opacity-0"}`}> */}
             {showContent ? (
-                <ProjectView />
+                <AboutView changeContent={changeContent}/>
               ) : (
-              <AboutView changeContent={changeContent}
-                    showContent={showContent}
-                    setShowContent={setShowContent}
-             />
+              <ProjectView changeContent={changeContent} />
               )}
+              {/* </div> */}
           </div>
           </div>
         </div>
