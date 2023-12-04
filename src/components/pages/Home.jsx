@@ -6,6 +6,7 @@ import About from "./About";
 import HomeInfo from "../HomeInfo";
 import AboutView from "../AboutView";
 import ProjectView from "../ProjectView";
+import Footer from "../Footer";
 
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
 
   return (
     <>
-      <div className="main-container overflow-hidden">
+      <div className="main-container">
         <div className="flex-container w-full">
           {/* first row */}
           <HomeInfo changeContent={changeContent}/>
@@ -35,6 +36,7 @@ function Home() {
           </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

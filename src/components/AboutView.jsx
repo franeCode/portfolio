@@ -1,8 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
 
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 // import { MdEmail } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -46,22 +43,12 @@ function AboutView({ changeContent }) {
             <p className="download">PROJECTS <FaArrowRight /></p>
         </button>
       </div> */}
-        <div className="social-wrapper py-6">
+        <div className="">
           {/* <p>
         Feel free to explore my work and get in touch to discuss potential
         collaborations or simply to share your love for coding or music.
       </p> */}
-          <div className="social-icons">
-            {/* <NavLink to="mailto:franjetina@gmail.com">
-            <MdEmail />
-          </NavLink> */}
-            <NavLink to="https://www.linkedin.com/" target="_blank">
-              <FaGithub />
-            </NavLink>
-            <NavLink to="https://www.linkedin.com/" target="_blank">
-              <FaLinkedin />
-            </NavLink>
-          </div>
+          
         </div>
       </div>
     </>

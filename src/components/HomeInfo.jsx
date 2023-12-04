@@ -9,6 +9,8 @@ import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
 import cv from "../../A.Popovic_CV.pdf";
 import { MdEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function HomeInfo({ changeContent }) {
   const [activeButton, setActiveButton] = useState('__ PROJECTS');
@@ -33,7 +35,7 @@ function HomeInfo({ changeContent }) {
           </div>
 
           <div className='links'>
-            <button onClick={handleButtonClick} className=''>
+            <button onClick={handleButtonClick} className='p-2'>
               <p className={`btn-link ${activeButton === '__ ABOUT' ? 'active' : ''}`}>
                 {activeButton}
               </p>
@@ -41,22 +43,31 @@ function HomeInfo({ changeContent }) {
           
 
           <div className="download">
-            <p>__ CONTACT</p>
-            <NavLink to="mailto:franjetina@gmail.com">
-              <MdEmail className='hover:animate-bounce' />
+            <NavLink to="mailto:franjetina@gmail.com" className='btn-link cursor-pointer'>
+            __ CONTACT
+              {/* <MdEmail className='hover:animate-bounce' /> */}
             </NavLink>
           </div>
 
           <div className="download">
-            <p>__ CV</p>
-            <a href={cv} download>
-              <SlCloudDownload className='hover:animate-bounce' />
+            <a href={cv} className='btn-link cursor-pointer' download>
+              {/* <SlCloudDownload  /> */}
+              __ CV
             </a>
           </div>
 
-          <div>
+          <div className='social-wrapper py-10'>
             <p>Feel free to explore my other work</p>
+            <div className="social-icons">
+            <NavLink to="https://github.com/franeCode" target="_blank">
+              <FaGithub />
+            </NavLink>
+            <NavLink to="https://www.linkedin.com/in/ana-popovi%C4%87-57973247/" target="_blank">
+              <FaLinkedin />
+            </NavLink>
           </div>
+          </div>
+
           </div>
         </div>
       </div>
