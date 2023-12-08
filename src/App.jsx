@@ -2,9 +2,6 @@ import "./App.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-// import Home from './components/pages/Home.jsx'
-import About from "./components/pages/About.jsx";
-import Projects from "./components/pages/Projects.jsx";
 import WebFont from "webfontloader";
 import AboutView from "./components/AboutView.jsx";
 

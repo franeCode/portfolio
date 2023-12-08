@@ -3,7 +3,7 @@ import React from "react";
 // import { MdEmail } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 
-function AboutView({ changeContent }) {
+function AboutView() {
   return (
     <>
       <div className="about-wrapper">

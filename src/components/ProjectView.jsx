@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import calcubrain from "../assets/calcubrain.png"
+import calcubrain from "../assets/calcubrain.png";
 import recipeimg from "../assets/dish-diary.png";
-import meteor from "../assets/meteor-shower.png"
+import meteor from "../assets/meteor-shower.png";
 import html from "../assets/icons8-html-5.svg";
 import css from "../assets/icons8-css.svg";
 import javascript from "../assets/icons8-javascript.svg";
@@ -13,97 +13,151 @@ import python from "../assets/icons8-python.svg";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
 import { HiArrowNarrowLeft } from "react-icons/hi";
+import { useState } from "react";
 
-function ProjectView({ changeContent }) {
-  const navigate = useNavigate()
+function ProjectView() {
+    const [isDishDiaryClicked, setDishDiaryClicked] = useState(false);
+    const [isMeteorShowerClicked, setMeteorShowerClicked] = useState(false);
+    const [isCalcuBrainClicked, setCalcuBrainClicked] = useState(false);
   
+    function handleClick(project) {
+      if (project === "DishDiary") {
+        setDishDiaryClicked(!isDishDiaryClicked);
+        setMeteorShowerClicked(false);
+        setCalcuBrainClicked(false);
+      } else if (project === "MeteorShower") {
+        setMeteorShowerClicked(!isMeteorShowerClicked);
+        setDishDiaryClicked(false);
+        setCalcuBrainClicked(false);
+      } else if (project === "CalcuBrain") {
+        setCalcuBrainClicked(!isCalcuBrainClicked);
+        setDishDiaryClicked(false);
+        setMeteorShowerClicked(false);
+      }
+    }
+
   return (
     <>
-    <div className="cards-wrapper overflow-y-hidden">
-        {/* <div className="w-full flex justify-start items-center">
-        <button onClick={() => changeContent()}>
-        <HiArrowNarrowLeft className="w-1/3" />
-        </button>
-        
-        <p className="text-4xl mb-2">PROJECTS</p>
-        </div> */}
-      <div className="card">
-        <div className="card-header">
-          <div className="card-img pb-2">
-            <img src={recipeimg} alt="dish-diary" />
+      <div className="cards-wrapper overflow-y-hidden">
+        <div className="card">
+          <div className="card-header">
+            <div className="card-img pb-2">
+              <img src={recipeimg} alt="dish-diary" />
+            </div>
+            <div className="relative pr-6">
+              {isDishDiaryClicked && (
+                <div className="link-container">
+                  <span className="">
+                    <Link className="text-center">live</Link>
+                  </span>
+                  <span className="">
+                    <Link className="text-center">code</Link>
+                  </span>
+                </div>
+              )}
+              <h1>DishDiary</h1>
+              <FaUpRightFromSquare
+                onClick={() => handleClick("DishDiary")}
+                className="text-sm absolute right-1 top-1 cursor-pointer hover:animate-pulse"
+              />
+            </div>
           </div>
-          <div className="relative pr-6">
-            <h1 >DishDiary</h1>
-            <FaUpRightFromSquare className="text-sm absolute right-1 top-1 cursor-pointer" />
+          <p>
+            DishDiary streamlines recipe management, sharing, and exploration
+            with secure JWT token-based authentication. Effortlessly create and
+            share culinary delights, enhancing the culinary experience for
+            users.
+          </p>
+
+          <div className="card-tech">
+            <img src={html}></img>
+            <img src={css}></img>
+            <img src={react}></img>
+            <img src={flask}></img>
+            <img src={python}></img>
+            {/* <FaCode className="cursor-pointer" /> */}
           </div>
-          {/* <FaCode /> */}
         </div>
-        <p>
-          DishDiary streamlines recipe management, sharing, and exploration with
-          secure JWT token-based authentication. Effortlessly create and share
-          culinary delights, enhancing the culinary experience for users.
-        </p>
 
-        <div className="card-tech">
-          <img src={html}></img>
-          <img src={css}></img>
-          <img src={react}></img>
-          <img src={flask}></img>
-          <img src={python}></img>
-          <FaCode className="cursor-pointer" />
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="card-header">
-          <div className="card-img pb-2">
-            <img src={meteor} alt="meteor-shower" />
+        <div className="card">
+          <div className="card-header">
+            <div className="card-img pb-2">
+              <img src={meteor} alt="meteor-shower" />
+            </div>
+            <div className="relative pr-6">
+              {isMeteorShowerClicked && (
+                <div className="link-container">
+                  <span className="">
+                    <Link className="text-center">live</Link>
+                  </span>
+                  <span className="">
+                    <Link className="text-center">code</Link>
+                  </span>
+                </div>
+              )}
+              <h1>Meteor Shower</h1>
+              <FaUpRightFromSquare
+                onClick={() => handleClick("MeteorShower")}
+                className="text-sm absolute right-1 top-1 cursor-pointer hover:animate-pulse"
+              />
+            </div>
           </div>
-          <div className="relative pr-6">
-            <h1>Meteor Shower</h1>
-            <FaUpRightFromSquare className="text-sm absolute right-1 top-1 cursor-pointer" />
+          <p>
+            Developed by my Chingu team, streamlines global meteorite impact
+            exploration with its intuitive search tools. Easily filter results
+            by name, year, composition, and mass, and visualize your findings in
+            table or map format. I had the privilege of serving as a lead
+            developer on this project and earned an MVP badge from my dedicated
+            team.
+          </p>
+
+          <div className="card-tech">
+            <img src={html}></img>
+            <img src={css}></img>
+            <img src={javascript}></img>
           </div>
-          {/* <FaCode /> */}
         </div>
-        <p>
-        Developed by my Chingu team, streamlines global meteorite impact exploration with its intuitive search tools. Easily filter results by name, year, composition, and mass, and visualize your findings in table or map format. I had the privilege of serving as a lead developer on this project and earned an MVP badge from my dedicated team.
-        </p>
 
-        <div className="card-tech">
-          <img src={html}></img>
-          <img src={css}></img>
-          <img src={javascript}></img>
-          <FaCode className="cursor-pointer" />
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="card-header">
-          <div className="card-img pb-2">
-            <img src={calcubrain} alt="calcubrain" />
+        <div className="card">
+          <div className="card-header">
+            <div className="card-img pb-2">
+              <img src={calcubrain} alt="calcubrain" />
+            </div>
+            <div className="relative pr-6">
+              {isCalcuBrainClicked && (
+                <div className="link-container">
+                  <span className="">
+                    <Link className="text-center">live</Link>
+                  </span>
+                  <span className="">
+                    <Link className="text-center">code</Link>
+                  </span>
+                </div>
+              )}
+              <h1>CalcuBrain</h1>
+              <FaUpRightFromSquare
+                onClick={() => handleClick("CalcuBrain")}
+                className="text-sm absolute right-1 top-1 cursor-pointer hover:animate-pulse"
+              />
+            </div>
           </div>
-          <div className="relative pr-6">
-            <h1>CalcuBrain</h1>
-            <FaUpRightFromSquare className="text-sm absolute right-1 top-1 cursor-pointer" />
+          <p>
+            CalcuBrain is a basic calculator application that includes keyboard
+            input functionality, addition, subtraction, multiplication, division
+            and persentage. This project was developed using Object-Oriented
+            Programming (OOP) principles and served as an excellent learning
+            experience.
+          </p>
+
+          <div className="card-tech">
+            <img src={html}></img>
+            <img src={css}></img>
+            <img src={javascript}></img>
           </div>
-          {/* <FaCode /> */}
         </div>
-        <p>
-        CalcuBrain is a basic calculator application that includes keyboard input functionality, addition, subtraction, multiplication, division and persentage. This project was developed using Object-Oriented Programming (OOP) principles and served as an excellent learning experience.
-        </p>
-
-        <div className="card-tech">
-          <img src={html}></img>
-          <img src={css}></img>
-          <img src={javascript}></img>
-          <FaCode className="cursor-pointer" />
-        </div>
-      </div>
-
-
       </div>
     </>
-  )
+  );
 }
 
-export default ProjectView
+export default ProjectView;
