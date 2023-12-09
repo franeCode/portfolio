@@ -88,7 +88,7 @@ function ProjectView() {
               {isMeteorShowerClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center"><FaPlay /></Link>
+                    <Link to="https://ornate-gumption-94dfce.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-center"><FaPlay /></Link>
                   </span>
                   <span className="">
                     <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
@@ -127,7 +127,7 @@ function ProjectView() {
               {isCalcuBrainClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center"><FaPlay /></Link>
+                    <Link to="https://calcubrain.anapopovic.me/" target="_blank" rel="noopener noreferrer" className="text-center"><FaPlay /></Link>
                   </span>
                   <span className="">
                     <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
