@@ -30,12 +30,12 @@ function Home() {
           {/* second row */}
           <div className="big-container">
           <div
-          className={`transition-opacity duration-500 ${showAbout ? "opacity-100 visible" : "opacity-0 invisible"}`}
+          className={`transition-opacity duration-1000 ${showAbout ? "opacity-100 visible" : "opacity-0 invisible"}`}
         >
           {showAbout && <AboutView />}
         </div>
         <div
-          className={`transition-opacity duration-500 ${showProjects ? "opacity-100 visible" : "opacity-0 invisible"}`}
+          className={`transition-opacity duration-1000 ${showProjects ? "opacity-100 visible" : "opacity-0 invisible"}`}
         >
           {showProjects && <ProjectView />}
         </div>

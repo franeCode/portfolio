@@ -12,7 +12,7 @@ import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
-import { HiArrowNarrowLeft } from "react-icons/hi";
+import { FaPlay } from "react-icons/fa6";
 import { useState } from "react";
 
 function ProjectView() {
@@ -38,7 +38,7 @@ function ProjectView() {
 
   return (
     <>
-      <div className="cards-wrapper overflow-y-hidden">
+      <div className="cards-wrapper content-wrapper">
         <div className="card">
           <div className="card-header">
             <div className="card-img pb-2">
@@ -48,10 +48,10 @@ function ProjectView() {
               {isDishDiaryClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center">live</Link>
+                    <Link className="text-center"><FaPlay /></Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">code</Link>
+                    <Link className="text-center"><FaCode className="cursor-pointer" /> </Link>
                   </span>
                 </div>
               )}
@@ -88,10 +88,10 @@ function ProjectView() {
               {isMeteorShowerClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center">live</Link>
+                    <Link className="text-center"><FaPlay /></Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">code</Link>
+                    <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
                   </span>
                 </div>
               )}
@@ -127,10 +127,10 @@ function ProjectView() {
               {isCalcuBrainClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center">live</Link>
+                    <Link className="text-center"><FaPlay /></Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">code</Link>
+                    <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
                   </span>
                 </div>
               )}

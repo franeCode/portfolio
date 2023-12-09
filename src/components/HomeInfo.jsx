@@ -58,37 +58,6 @@ function HomeInfo({ changeAbout, changeProjects }) {
             </button>
           </div>
 
-          <div className="flex flex-row justify-center lg:hidden pt-4 md:py-4 -ml-28">
-            <button
-              onClick={() => handleAbout("about")}
-              className={`p-2 transition duration-300 ease-in-out md:text-xl ${
-                activeButton === "about" ? " text-white text-lg" : ""
-              }`}
-            >
-              <p className="mx-8">ABOUT</p>
-              <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p>
-            </button>
-
-            <button
-              onClick={() => handleProjects("projects")}
-              className={`p-2 transition-transform duration-300 ease-in transform md:text-xl ${
-                activeButton === "projects" ? "text-white text-xl" : ""
-              }`}
-            >
-              <p className="">PROJECTS</p>
-              <p className="border border-bottom border-text w-[1.2rem] text-start"></p>
-            </button>
-            
-            
-          </div>
-          
-
-          {/* <div className="download">
-            <NavLink to="mailto:franjetina@gmail.com" className='btn-link cursor-pointer'>
-            __ CONTACT
-            </NavLink>
-          </div> */}
-
           <div className="download">
             <a href={cv} className="btn-link cursor-pointer" download>
               {/* <SlCloudDownload  /> */}
@@ -112,6 +81,29 @@ function HomeInfo({ changeAbout, changeProjects }) {
             </div>
             {/* </div> */}
           </div>
+
+          <div className="flex flex-row justify-center lg:hidden pt-4 md:py-4 -ml-28">
+            <button
+              onClick={() => handleAbout("about")}
+              className={`p-2 transition duration-300 ease-in-out md:text-xl ${
+                activeButton === "about" ? " text-white text-lg" : ""
+              }`}
+            >
+              <p className="mx-8">ABOUT</p>
+              {/* <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p> */}
+            </button>
+
+            <button
+              onClick={() => handleProjects("projects")}
+              className={`p-2 transition-transform duration-300 ease-in transform md:text-xl ${
+                activeButton === "projects" ? "text-white text-lg" : ""
+              }`}
+            >
+              <p className="">PROJECTS</p>
+              {/* <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p> */}
+            </button>
+          </div>
+
         </div>
       </div>
     </>

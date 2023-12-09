@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 function AboutView() {
   return (
     <>
-      <div className="about-wrapper">
+      <div className="about-wrapper content-wrapper">
         <p>
           Hello! I'm Ana, a dedicated full-stack developer with a profound
           passion for creating beautiful and secure web applications. Over the
