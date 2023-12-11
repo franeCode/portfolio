@@ -3,23 +3,25 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'tt_firs_neuelight';
-  src: url('../fonts/typetype_-_tt_firs_neue_light-webfont.woff2') format('woff2');
+  font-family: "tt_firs_neuelight";
+  src: url("../fonts/typetype_-_tt_firs_neue_light-webfont.woff2")
+    format("woff2");
 }
 @font-face {
-  font-family: 'tt_firs_neue_extrabold';
-  src: url('../fonts/typetype_-_typeType - tt_firs_neue_extrabold.woff2') format('woff2')
-    url('../fonts/typetype_-_tt_firs_neue_extrabold.woff') format('woff');
+  font-family: "tt_firs_neue_extrabold";
+  src: url("../fonts/typetype_-_typeType - tt_firs_neue_extrabold.woff2")
+    format("woff2") url("../fonts/typetype_-_tt_firs_neue_extrabold.woff")
+    format("woff");
 }
 
 :root {
-  font-family: 'tt_firs_neuelight', sans-serif;
+  font-family: "tt_firs_neuelight", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: #002F41;
-  color: #B4B8C1;
-  background-color: #002F41;
+  color-scheme: #002f41;
+  color: #b4b8c1;
+  background-color: #002f41;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,20 +29,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 ::-webkit-scrollbar {
-  width: 6px; 
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #002F41;
+  background-color: #002f41;
 }
 #root {
   @apply max-w-[100%] max-md:w-[90vh] pt-8 px-4 md:p-8 text-center mx-auto;
-  /* margin: 0 auto; */
 }
 body {
   @apply overflow-y-scroll;
   scrollbar-width: thin;
-  scrollbar-face-color: #002F41;
-  font-family: 'tt_firs_neuelight', sans-serif;
+  scrollbar-face-color: #002f41;
+  font-family: "tt_firs_neuelight", sans-serif;
 }
 .main-container {
   @apply w-full py-[4rem] px-2 xl:px-[6rem];
@@ -65,7 +66,7 @@ img {
 }
 .download {
   @apply hidden lg:flex flex-row items-center text-xl lg:text-2xl p-2 gap-2;
-  font-family: 'tt_firs_neuelight', sans-serif;
+  font-family: "tt_firs_neuelight", sans-serif;
 }
 .tech img {
   @apply w-[1.5rem] md:w-[2rem] xl:w-[2rem];
@@ -122,6 +123,3 @@ img {
 .link-container span {
   @apply flex flex-row items-center justify-center h-4 w-4 sm:h-8 sm:w-8 border border-white rounded-full text-xs p-3 mx-1 transition-transform hover:transform hover:scale-110 duration-300 ease-in-out;
 }
-/* .bold {
-  font-family: 'tt_firs_neue_extrabold';
-} */
