@@ -8,9 +8,6 @@ import javascript from "../assets/icons8-javascript.svg";
 import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
 import cv from "../../CV_A.Popovic.pdf";
-// import { MdOutlineEmail } from "react-icons/md";
-// import { FaGithub } from "react-icons/fa";
-// import { FaLinkedin } from "react-icons/fa";
 
 function HomeInfo({ changeAbout, changeProjects }) {
   const [activeButton, setActiveButton] = useState("about");
