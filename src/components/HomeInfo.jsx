@@ -7,7 +7,7 @@ import css from "../assets/icons8-css.svg";
 import javascript from "../assets/icons8-javascript.svg";
 import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
-import cv from "../../A.Popovic_CV.pdf";
+import cv from "../../CV_A.Popovic.pdf";
 // import { MdOutlineEmail } from "react-icons/md";
 // import { FaGithub } from "react-icons/fa";
 // import { FaLinkedin } from "react-icons/fa";

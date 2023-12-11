@@ -19,7 +19,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import cv from "../../A.Popovic_CV.pdf";
+import cv from "../../CV_A.Popovic.pdf";
 import { SlCloudDownload } from "react-icons/sl";
 
 function AboutView() {
