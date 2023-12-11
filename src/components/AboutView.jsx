@@ -19,15 +19,23 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import cv from "../../A.Popovic_CV.pdf";
+import { SlCloudDownload } from "react-icons/sl";
 
 function AboutView() {
   return (
     <>
       <div className="about-wrapper content-wrapper">
         <div>
-          Hello! I'm Ana, and I love creating beautiful and accessible web applications. My coding journey started as a hobby a year ago, and I've been hooked ever since. Using JavaScript and Python, along with their frameworks and libraries, I create experiences that meet users' needs and empower applications. Previously, I worked as a researcher focusing on cultural diversity, education, and heritage. Now, I'm applying my anthropological approach and experience to coding, aiming to create more diverse and inclusive applications for everyone.
+          Hello! I'm Ana, and I love creating beautiful and accessible web
+          applications. My coding journey started as a hobby a year ago, and
+          I've been hooked ever since. Using JavaScript and Python, along with
+          their frameworks and libraries, I create experiences that meet users'
+          needs and empower applications. Previously, I worked as a researcher
+          focusing on cultural diversity, education, and heritage. Now, I'm
+          applying my anthropological approach and experience to coding, aiming
+          to create more diverse and inclusive applications for everyone.
         </div>
-        
 
         {/* <div className="flex flex-col"> 
         <p className="">Skillset</p> 
@@ -43,33 +51,39 @@ function AboutView() {
             <BsFiletypeSql />
             </div>
           </div> */}
-          
+
         <div>
-          Beyond coding, I find joy in exploring music with my guitar and piano which influences my innovative problem-solving approach in development.
-        </div>
-        
-        <div>
-          If you share a similar vision or if you're looking for
-          a passionate developer to bring creative ideas to life, I would love
-          to connect, learn, and collaborate with you.
+          Beyond coding, I find joy in exploring music with my guitar and piano
+          which influences my innovative problem-solving approach in
+          development.
         </div>
 
-        <div className="social-wrapper text-sm py-10">
-            {/* <p>Feel free to explore my other work</p> */}
-            <div className="social-icons">
-              <MdOutlineEmail className="cursor-pointer hover:animate-bounce" />
-              <NavLink to="https://github.com/franeCode" target="_blank">
-                <FaGithub className="hover:animate-pulse" />
-              </NavLink>
-              <NavLink
-                to="https://www.linkedin.com/in/ana-popovi%C4%87-57973247/"
-                target="_blank"
-              >
-                <FaLinkedin className="hover:animate-pulse" />
-              </NavLink>
+        <div>
+          If you share a similar vision or if you're looking for a passionate
+          developer to bring creative ideas to life, I would love to connect,
+          learn, and collaborate with you.
+        </div>
+
+        <div className="social-wrapper -ml-8">
+          <div className="social-icons">
+            <div className="lg:hidden text-xl">
+              <a href={cv} className="cursor-pointer" download>
+                <SlCloudDownload />
+              </a>
             </div>
-            {/* </div> */}
+            <MdOutlineEmail className="cursor-pointer hover:animate-bounce" />
+            <NavLink to="https://github.com/franeCode" target="_blank">
+              <FaGithub className="hover:animate-pulse" />
+            </NavLink>
+            <NavLink
+              to="https://www.linkedin.com/in/ana-popovi%C4%87-57973247/"
+              target="_blank"
+            >
+              <FaLinkedin className="hover:animate-pulse" />
+            </NavLink>
           </div>
+          {/* </div> */}
+        </div>
       </div>
     </>
   );

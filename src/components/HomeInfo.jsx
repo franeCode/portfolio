@@ -28,7 +28,7 @@ function HomeInfo({ changeAbout, changeProjects }) {
   return (
     <>
       <div className="small-wrapper">
-        <div className="w-full xl:w-1/4 fixed top-0 lg:top-20 bg-main pt-6 lg:pt-0 z-20">
+        <div className="w-full lg:w-1/4 fixed top-0 lg:top-20 bg-main pt-6 lg:pt-0 lg:px-6 xl:px-0 z-20">
           <img src={logo} alt="logo-img" />
           <div className="">
           <div className="tech">
@@ -67,7 +67,7 @@ function HomeInfo({ changeAbout, changeProjects }) {
             </a>
           </div>
 
-          <div className="flex flex-row justify-center xl:hidden pt-8 md:py-4 -translate-x-8 sm:-translate-x-28">
+          <div className="flex flex-row justify-center lg:hidden pt-8 md:py-4 -translate-x-8 sm:-translate-x-16">
             <button
               onClick={() => handleAbout("about")}
               className={`p-2 transition duration-300 ease-in-out md:text-xl ${
