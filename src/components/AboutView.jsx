@@ -1,20 +1,5 @@
 import React from "react";
 
-// import { MdEmail } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa";
-import html from "../assets/icons8-html-5.svg";
-import css from "../assets/icons8-css.svg";
-import javascript from "../assets/icons8-javascript.svg";
-import react from "../assets/icons8-react.svg";
-import python from "../assets/icons8-python.svg";
-import { FaBootstrap } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiFlask } from "react-icons/si";
-import { RiJavascriptFill } from "react-icons/ri";
-import { FaPython } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { BsFiletypeSql } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -36,21 +21,6 @@ function AboutView() {
           applying my anthropological approach and experience to coding, aiming
           to create more diverse and inclusive applications for everyone.
         </div>
-
-        {/* <div className="flex flex-col"> 
-        <p className="">Skillset</p> 
-          <div className="tech">
-            <FaHtml5 />
-            <img src={css} alt="CSS"></img>
-            <RiJavascriptFill />
-            <FaReact />
-            <FaPython />
-            <FaBootstrap />
-            <SiTailwindcss/>
-            <SiFlask />
-            <BsFiletypeSql />
-            </div>
-          </div> */}
 
         <div>
           Beyond coding, I find joy in exploring music with my guitar and piano
@@ -82,7 +52,6 @@ function AboutView() {
               <FaLinkedin className="hover:animate-pulse" />
             </NavLink>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </>

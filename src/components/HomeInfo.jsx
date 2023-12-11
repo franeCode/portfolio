@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import logo from "../assets/logo-vector.png";
-import { SlCloudDownload } from "react-icons/sl";
 import html from "../assets/icons8-html-5.svg";
 import css from "../assets/icons8-css.svg";
 import javascript from "../assets/icons8-javascript.svg";
@@ -28,13 +26,13 @@ function HomeInfo({ changeAbout, changeProjects }) {
         <div className="w-full lg:w-1/4 fixed top-0 lg:top-20 bg-main pt-6 lg:pt-0 lg:px-6 xl:px-0 z-20">
           <img src={logo} alt="logo-img" />
           <div className="">
-          <div className="tech">
-            <img src={html} alt="HTML"></img>
-            <img src={css} alt="CSS"></img>
-            <img src={javascript} alt="JavaScript"></img>
-            <img src={react} alt="React"></img>
-            <img src={python} alt="Python"></img>
-          </div>
+            <div className="tech">
+              <img src={html} alt="HTML"></img>
+              <img src={css} alt="CSS"></img>
+              <img src={javascript} alt="JavaScript"></img>
+              <img src={react} alt="React"></img>
+              <img src={python} alt="Python"></img>
+            </div>
           </div>
 
           <div className="links">
@@ -59,7 +57,6 @@ function HomeInfo({ changeAbout, changeProjects }) {
 
           <div className="download">
             <a href={cv} className="btn-link cursor-pointer" download>
-              {/* <SlCloudDownload  /> */}
               __ CV download
             </a>
           </div>
@@ -72,7 +69,6 @@ function HomeInfo({ changeAbout, changeProjects }) {
               }`}
             >
               <p className="">ABOUT</p>
-              {/* <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p> */}
             </button>
 
             <button
@@ -82,14 +78,9 @@ function HomeInfo({ changeAbout, changeProjects }) {
               }`}
             >
               <p className="">PROJECTS</p>
-              {/* <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p> */}
             </button>
           </div>
-
-          
-
         </div>
-        
       </div>
     </>
   );

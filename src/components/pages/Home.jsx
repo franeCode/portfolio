@@ -12,14 +12,14 @@ function Home() {
 
   const changeAbout = () => {
     setShowAbout(true);
-    setShowProjects(false)
+    setShowProjects(false);
   };
 
   const changeProjects = () => {
-    setShowProjects(true)
-    setShowAbout(false)
-  }
-  
+    setShowProjects(true);
+    setShowAbout(false);
+  };
+
   return (
     <>
       <div className="main-container">
@@ -29,20 +29,23 @@ function Home() {
 
           {/* second row */}
           <div className="big-container">
-          <div
-          className={`transition-opacity duration-1000 ${showAbout ? "opacity-100 visible" : "opacity-0 invisible"}`}
-        >
-          {showAbout && <AboutView />}
+            <div
+              className={`transition-opacity duration-1000 ${
+                showAbout ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+            >
+              {showAbout && <AboutView />}
+            </div>
+            <div
+              className={`transition-opacity duration-1000 ${
+                showProjects ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+            >
+              {showProjects && <ProjectView />}
+            </div>
+          </div>
+          <Footer />
         </div>
-        <div
-          className={`transition-opacity duration-1000 ${showProjects ? "opacity-100 visible" : "opacity-0 invisible"}`}
-        >
-          {showProjects && <ProjectView />}
-        </div>
-        </div>
-        <Footer />
-        </div>
-        
       </div>
     </>
   );
