@@ -3,9 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="w-full flex justify-center items-center fixed bottom-0 bg-main h-8">
-        <small>
-          &copy; franeCode 2023 | All Rights Reserved | Site by Ana Popovic
+      <div className="w-full flex flex-col justify-center items-center fixed lg:-left-6 bottom-0 bg-main h-8">
+        <small className="text-xs">
+          &copy; 2023 Ana Popovic
         </small>
       </div>
     </>

@@ -8,12 +8,12 @@ import javascript from "../assets/icons8-javascript.svg";
 import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
 import cv from "../../A.Popovic_CV.pdf";
-import { MdOutlineEmail } from "react-icons/md";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+// import { MdOutlineEmail } from "react-icons/md";
+// import { FaGithub } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 
 function HomeInfo({ changeAbout, changeProjects }) {
-  const [activeButton, setActiveButton] = useState();
+  const [activeButton, setActiveButton] = useState("about");
 
   const handleAbout = (content) => {
     changeAbout(content);
@@ -28,14 +28,16 @@ function HomeInfo({ changeAbout, changeProjects }) {
   return (
     <>
       <div className="small-wrapper">
-        <div className="w-full lg:w-1/3 fixed top-0 lg:top-20 bg-main pt-6 px-2 lg:pt-0 z-20">
+        <div className="w-full xl:w-1/4 fixed top-0 lg:top-20 bg-main pt-6 lg:pt-0 z-20">
           <img src={logo} alt="logo-img" />
+          <div className="">
           <div className="tech">
             <img src={html} alt="HTML"></img>
             <img src={css} alt="CSS"></img>
             <img src={javascript} alt="JavaScript"></img>
             <img src={react} alt="React"></img>
             <img src={python} alt="Python"></img>
+          </div>
           </div>
 
           <div className="links">
@@ -65,31 +67,14 @@ function HomeInfo({ changeAbout, changeProjects }) {
             </a>
           </div>
 
-          <div className="social-wrapper text-sm py-10">
-            <p>Feel free to explore my other work</p>
-            <div className="social-icons">
-              <MdOutlineEmail className="cursor-pointer hover:animate-bounce" />
-              <NavLink to="https://github.com/franeCode" target="_blank">
-                <FaGithub className="hover:animate-pulse" />
-              </NavLink>
-              <NavLink
-                to="https://www.linkedin.com/in/ana-popovi%C4%87-57973247/"
-                target="_blank"
-              >
-                <FaLinkedin className="hover:animate-pulse" />
-              </NavLink>
-            </div>
-            {/* </div> */}
-          </div>
-
-          <div className="flex flex-row justify-center lg:hidden pt-4 md:py-4 -ml-28">
+          <div className="flex flex-row justify-center xl:hidden pt-8 md:py-4 -translate-x-8 sm:-translate-x-28">
             <button
               onClick={() => handleAbout("about")}
               className={`p-2 transition duration-300 ease-in-out md:text-xl ${
                 activeButton === "about" ? " text-white text-lg" : ""
               }`}
             >
-              <p className="mx-8">ABOUT</p>
+              <p className="">ABOUT</p>
               {/* <p className="border border-bottom border-text w-[1.2rem] mx-8 text-start"></p> */}
             </button>
 
@@ -104,7 +89,10 @@ function HomeInfo({ changeAbout, changeProjects }) {
             </button>
           </div>
 
+          
+
         </div>
+        
       </div>
     </>
   );

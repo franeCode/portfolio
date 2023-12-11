@@ -38,7 +38,7 @@ function ProjectView() {
 
   return (
     <>
-      <div className="cards-wrapper content-wrapper">
+      <div className="cards-wrapper content-wrapper lg:py-0 xl:pl-14">
         <div className="card">
           <div className="card-header">
             <div className="card-img pb-2">

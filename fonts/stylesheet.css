@@ -8,5 +8,9 @@
          url('typetype_-_tt_firs_neue_light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+@font-face {
+    font-family: 'tt_firs_neue_extrabold';
+    src: url('../fonts/typetype_-_typeType - tt_firs_neue_extrabold.woff2') format('woff2')
+      url('../fonts/typetype_-_tt_firs_neue_extrabold.woff') format('woff');
+  }
