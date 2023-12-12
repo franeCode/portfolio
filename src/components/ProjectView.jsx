@@ -53,7 +53,7 @@ function ProjectView() {
                     </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">
+                    <Link to="https://github.com/franeCode/DishDiary" className="text-center" target="_blank">
                       <FaCode className="cursor-pointer" />{" "}
                     </Link>
                   </span>
@@ -98,7 +98,7 @@ function ProjectView() {
                     </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">
+                    <Link to="https://github.com/chingu-voyages/v45-tier1-team-03" className="text-center" target="_blank">
                       <FaCode className="cursor-pointer" />
                     </Link>
                   </span>
@@ -141,8 +141,11 @@ function ProjectView() {
                     </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center">
-                      <FaCode className="cursor-pointer" />
+                    <Link to="https://github.com/franeCode/CalcuBrain" className="text-center"
+                    target="_blank" >
+                      <FaCode 
+                      className="cursor-pointer"
+                      />
                     </Link>
                   </span>
                 </div>
