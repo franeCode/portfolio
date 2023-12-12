@@ -16,25 +16,25 @@ import { FaPlay } from "react-icons/fa6";
 import { useState } from "react";
 
 function ProjectView() {
-    const [isDishDiaryClicked, setDishDiaryClicked] = useState(false);
-    const [isMeteorShowerClicked, setMeteorShowerClicked] = useState(false);
-    const [isCalcuBrainClicked, setCalcuBrainClicked] = useState(false);
-  
-    function handleClick(project) {
-      if (project === "DishDiary") {
-        setDishDiaryClicked(!isDishDiaryClicked);
-        setMeteorShowerClicked(false);
-        setCalcuBrainClicked(false);
-      } else if (project === "MeteorShower") {
-        setMeteorShowerClicked(!isMeteorShowerClicked);
-        setDishDiaryClicked(false);
-        setCalcuBrainClicked(false);
-      } else if (project === "CalcuBrain") {
-        setCalcuBrainClicked(!isCalcuBrainClicked);
-        setDishDiaryClicked(false);
-        setMeteorShowerClicked(false);
-      }
+  const [isDishDiaryClicked, setDishDiaryClicked] = useState(false);
+  const [isMeteorShowerClicked, setMeteorShowerClicked] = useState(false);
+  const [isCalcuBrainClicked, setCalcuBrainClicked] = useState(false);
+
+  function handleClick(project) {
+    if (project === "DishDiary") {
+      setDishDiaryClicked(!isDishDiaryClicked);
+      setMeteorShowerClicked(false);
+      setCalcuBrainClicked(false);
+    } else if (project === "MeteorShower") {
+      setMeteorShowerClicked(!isMeteorShowerClicked);
+      setDishDiaryClicked(false);
+      setCalcuBrainClicked(false);
+    } else if (project === "CalcuBrain") {
+      setCalcuBrainClicked(!isCalcuBrainClicked);
+      setDishDiaryClicked(false);
+      setMeteorShowerClicked(false);
     }
+  }
 
   return (
     <>
@@ -48,10 +48,14 @@ function ProjectView() {
               {isDishDiaryClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center"><FaPlay /></Link>
+                    <Link className="text-center">
+                      <FaPlay />
+                    </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center"><FaCode className="cursor-pointer" /> </Link>
+                    <Link className="text-center">
+                      <FaCode className="cursor-pointer" />{" "}
+                    </Link>
                   </span>
                 </div>
               )}
@@ -63,10 +67,7 @@ function ProjectView() {
             </div>
           </div>
           <p>
-            DishDiary streamlines recipe management, sharing, and exploration
-            with secure JWT token-based authentication. Effortlessly create and
-            share culinary delights, enhancing the culinary experience for
-            users.
+          DishDiary is focused on recipe management, allowing users to add, share, and delete recipes. To enhance user experience, I integrated a search component, enabling users to explore recipes beyond the app by fetching data from an external API. The technology stack includes React for the frontend, Flask for the backend, sqlAlchemy for database management, and JWT tokens for security implementation.
           </p>
 
           <div className="card-tech">
@@ -75,7 +76,6 @@ function ProjectView() {
             <img src={react}></img>
             <img src={flask}></img>
             <img src={python}></img>
-            {/* <FaCode className="cursor-pointer" /> */}
           </div>
         </div>
 
@@ -88,10 +88,19 @@ function ProjectView() {
               {isMeteorShowerClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link to="https://ornate-gumption-94dfce.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-center"><FaPlay /></Link>
+                    <Link
+                      to="https://ornate-gumption-94dfce.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-center"
+                    >
+                      <FaPlay />
+                    </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
+                    <Link className="text-center">
+                      <FaCode className="cursor-pointer" />
+                    </Link>
                   </span>
                 </div>
               )}
@@ -103,12 +112,7 @@ function ProjectView() {
             </div>
           </div>
           <p>
-            Developed by my Chingu team, streamlines global meteorite impact
-            exploration with its intuitive search tools. Easily filter results
-            by name, year, composition, and mass, and visualize your findings in
-            table or map format. I had the privilege of serving as a lead
-            developer on this project and earned an MVP badge from my dedicated
-            team.
+          Developed by my Chingu team, this app is focused  on global meteorite impact exploration with its intuitive search tools. Users can filter results by name, year, composition, and mass, and visualize findings in table or map format. I had the privilege of serving as a lead developer on this project and earned an MVP badge from my dedicated team.
           </p>
 
           <div className="card-tech">
@@ -127,10 +131,19 @@ function ProjectView() {
               {isCalcuBrainClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link to="https://calcubrain.anapopovic.me/" target="_blank" rel="noopener noreferrer" className="text-center"><FaPlay /></Link>
+                    <Link
+                      to="https://calcubrain.anapopovic.me/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-center"
+                    >
+                      <FaPlay />
+                    </Link>
                   </span>
                   <span className="">
-                    <Link className="text-center"><FaCode className="cursor-pointer" /></Link>
+                    <Link className="text-center">
+                      <FaCode className="cursor-pointer" />
+                    </Link>
                   </span>
                 </div>
               )}
