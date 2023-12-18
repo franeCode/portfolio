@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import WebFont from "webfontloader";
-import AboutView from "./components/AboutView.jsx";
+import NotFound from "./components/pages/NotFound.jsx";
 
 const Home = React.lazy(() => import("./components/pages/Home"));
 
@@ -28,7 +28,7 @@ function App() {
             </React.Suspense>
           }
         ></Route>
-        <Route path="/about" element={<AboutView />}></Route>
+        <Route path="/*" element={<NotFound />}></Route>
       </Routes>
     </>
   );

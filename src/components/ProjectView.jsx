@@ -10,6 +10,7 @@ import javascript from "../assets/icons8-javascript.svg";
 import flask from "../assets/icons8-flask.svg";
 import react from "../assets/icons8-react.svg";
 import python from "../assets/icons8-python.svg";
+import sql from "../assets/icons8-sql.png";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
 import { FaPlay } from "react-icons/fa6";
@@ -48,7 +49,7 @@ function ProjectView() {
               {isDishDiaryClicked && (
                 <div className="link-container">
                   <span className="">
-                    <Link className="text-center">
+                    <Link to="https://dish-diary-9993d7a31702.herokuapp.com/" className="text-center" target="_blank">
                       <FaPlay />
                     </Link>
                   </span>
@@ -76,6 +77,7 @@ function ProjectView() {
             <img src={react}></img>
             <img src={flask}></img>
             <img src={python}></img>
+            <img src={sql}></img>
           </div>
         </div>
 
