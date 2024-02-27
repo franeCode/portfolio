@@ -13,7 +13,7 @@ function AboutView() {
       <div className="about-wrapper content-wrapper">
         <div>
           Hello! I'm Ana, and I love creating beautiful and accessible web
-          applications. My coding journey started as a hobby a year ago, and
+          applications. My coding journey started as a hobby two years ago, and
           I've been hooked ever since. Using JavaScript and Python, along with
           their frameworks and libraries, I create experiences that meet users'
           needs and empower applications. Previously, I worked as a researcher
