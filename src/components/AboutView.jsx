@@ -8,6 +8,17 @@ import cv from "../../CV_A.Popovic.pdf";
 import { SlCloudDownload } from "react-icons/sl";
 
 function AboutView() {
+
+  const openEmailPopup = () => {
+    const email = 'franjetina@gmail.com';
+    const subject = 'Subject for the email';
+    const body = 'Body of the email';
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.open(mailtoLink, 'EmailPopup', 'width=600,height=400');
+  };
+
   return (
     <>
       <div className="about-wrapper content-wrapper">
@@ -41,7 +52,7 @@ function AboutView() {
                 <SlCloudDownload />
               </a>
             </div>
-            <MdOutlineEmail className="cursor-pointer hover:animate-bounce" />
+            <MdOutlineEmail className="cursor-pointer hover:animate-bounce" onClick={openEmailPopup} />
             <NavLink to="https://github.com/franeCode" target="_blank">
               <FaGithub className="hover:animate-pulse" />
             </NavLink>
